@@ -1,5 +1,4 @@
 
-
 class MenuItem:
     def __init__(self,name:str, price:float,category:str,available:bool=True):
         self.name = name
@@ -8,8 +7,8 @@ class MenuItem:
         self.available = available
 
     def get_info(self)->str:
-        return (f"name:{self.name}, price:{self.price },"
-                f" category:{self.category}")
+        print(f"name:{self.name}, price:{self.price },"
+                f"category:{self.category}")
 
     def set_available(self,status):
         if status == "is available":
@@ -21,6 +20,9 @@ class MenuItem:
 
     def is_available(self):
         return self.available
+
+
+
 
 
 if __name__ == "__main__":
