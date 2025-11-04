@@ -5,33 +5,33 @@ class Menu:
     def __init__(self):
         self.items = []
 
-    def add_item(self,menu_item):
+    def add_item(self,menu_item:"MenuItem")->None:
         self.items.append(menu_item)
 
-    def remove_item(self,item_name):
+    def remove_item(self,item_name:"MenuItem")->None:
         for item in self.items:
             if item.name == item_name:
                 self.items.remove(item)
 
-    def  get_item_by_name(self,name):
+    def  get_item_by_name(self,name:"MenuItem")->"MenuItem":
         for item in self.items:
             if item.name == name:
                 return item
         return None
 
-    def get_items_by_category(self,category):
+    def get_items_by_category(self,category)->list["MenuItem"]:
         all_category = []
         for item in self.items:
             if item.category == category:
                 all_category.append(item)
         return all_category
 
-    def display_menu(self):
+    def display_menu(self)->None:
         for item in self.items:
             if item.available:
                 item.get_info()
 
-    def get_total_items(self):
+    def get_total_items(self)->float:
         return f"total items:{len(self.items)}"
 
 if __name__ == "__main__":

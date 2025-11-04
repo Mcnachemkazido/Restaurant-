@@ -10,7 +10,7 @@ class MenuItem:
         print(f"name:{self.name}, price:{self.price },"
                 f"category:{self.category}")
 
-    def set_available(self,status):
+    def set_available(self,status)->None:
         if status == "is available":
             self.available =  True
         elif status == "sold out":
@@ -18,7 +18,7 @@ class MenuItem:
         else:
             raise ValueError("is available or sold out")
 
-    def is_available(self):
+    def is_available(self)->bool:
         return self.available
 
 
