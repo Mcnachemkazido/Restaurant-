@@ -34,23 +34,18 @@ class Menu:
     def get_total_items(self)->float:
         return f"total items:{len(self.items)}"
 
-if __name__ == "__main__":
-    from menu_item import MenuItem
-    i1 = MenuItem("fhis", 20, "A")
-    i2 = MenuItem("mit", 100, "A")
-    i3 = MenuItem("koki", 5, "B")
-    i4 = MenuItem("milk", 7, "B")
-    m = Menu()
-    m.add_item(i1)
-    m.add_item(i2)
-    m.add_item(i3)
-    m.add_item(i4)
-    m.display_menu()
-    print(m.get_total_items())
-    print(m.get_items_by_category('A'))
-    m.remove_item(i1.name)
-    print(m.get_total_items())
-    print(m.get_item_by_name(i2.name))
+# if __name__ == "__main__":
+from menu_items.menu_item import MenuItem
+i1 = MenuItem("fhis", 20, "A")
+i2 = MenuItem("mit", 100, "A")
+i3 = MenuItem("koki", 5, "B")
+i4 = MenuItem("milk", 7, "B")
+m = Menu()
+m.add_item(i1)
+m.add_item(i2)
+m.add_item(i3)
+m.add_item(i4)
+
 
 
 

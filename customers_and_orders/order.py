@@ -21,10 +21,11 @@ class Order:
 
     def set_status(self,new_status)->None:
             if new_status in ['pending','cooking','ready','delivered']:
-            self.status = new_status
+                self.status = new_status
 
     def display_order(self)->None:
-        print(f"order_number:{self.order_number},\n"
+        print(f"total_order = \n"
+              f"order_number:{self.order_number},\n"
               f" customer:{self.customer.name},\n"
               f" items:{self.items},\n "
               f"status: {self.status},\n "
