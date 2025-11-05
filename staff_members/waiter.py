@@ -1,7 +1,7 @@
-from staff import Staff
-from customers_and_orders.order import Order
-from customers_and_orders.customer import Customer
-from menu_items.menu import *
+# from staff import Staff
+# from customers_and_orders.order import Order
+# from customers_and_orders.customer import Customer
+# from menu_items.menu import *
 
 class Waiter(Staff):
     def __init__(self,name:str, salary:int,tips:int):
@@ -36,9 +36,9 @@ class Waiter(Staff):
 
 
 
-w = Waiter("menacehm",1000,50)
-c = Customer("moshe")
-w.take_order(c,m,10)
+# w = Waiter("menacehm",1000,50)
+# c = Customer("moshe")
+# w.take_order(c,m,10)
 
 
 
